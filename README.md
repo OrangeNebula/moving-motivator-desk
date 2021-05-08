@@ -1,11 +1,12 @@
+
 ### Introduction
 Online moving motivator game.
 For coding practice.
 
 ### Tasks
-[ ] Implement card domain entity, component
-[ ] Implement desk domain entity, component
-[ ] Add desk page.
+* [ ] Implement card domain entity, component
+* [ ] Implement desk domain entity, component
+* [ ] Add desk page.
 
 ### Reference
 * [moving-motivators](https://management30.com/practice/moving-motivators/)
