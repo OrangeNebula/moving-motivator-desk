@@ -22,20 +22,20 @@ export class CardEntity {
 
   constructor(
     public readonly type: CardType,
-    private _index: number,
+    private _position: number,
     private _score: number,
   ) {
-    if (_index >= DeskEntity.MaxDeskSlot || _index < 0) {
+    if (_position >= DeskEntity.MaxDeskSlot || _position < 0) {
       throw new InvalidDeskIndexError();
     }
   }
 
-  get index(): number {
-    return this._index;
+  get position(): number {
+    return this._position;
   }
 
-  set index(value: number) {
-    this._index = value;
+  set position(value: number) {
+    this._position = value;
   }
 
   get score(): number {

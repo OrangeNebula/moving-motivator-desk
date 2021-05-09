@@ -8,7 +8,7 @@ describe('Desk entity test', () => {
     desk.add(new CardEntity(
       CardType.Acceptance, 0, 0,
     ));
-    expect(desk.get(0).type).toBe(CardType.Acceptance);
+    expect(desk.get(0)?.type).toBe(CardType.Acceptance);
   });
 
   test('If desk has maximum cards, adding card will throw error', () => {
@@ -64,7 +64,7 @@ describe('Desk entity test', () => {
       new CardEntity(CardType.Status, 0, 0),
     ]);
     desk.change(0, 5);
-    expect(desk.get(5).type).toBe(CardType.Status);
+    expect(desk.get(5)?.type).toBe(CardType.Status);
   });
 
   test('Can update card properly', () => {
@@ -72,6 +72,6 @@ describe('Desk entity test', () => {
       new CardEntity(CardType.Status, 0, 0),
     ]);
     desk.update(new CardEntity(CardType.Status, 0, 100));
-    expect(desk.get(0).score).toBe(100);
+    expect(desk.get(0)?.score).toBe(100);
   });
 });
