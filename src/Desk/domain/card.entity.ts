@@ -1,6 +1,6 @@
-import {InvalidCardScoreError} from '../../Desk/error/InvalidCardScoreError';
-import {DeskEntity} from '../../Desk/domain/desk.entity';
-import {InvalidDeskIndexError} from '../../Desk/error/InvalidDeskIndexError';
+import {InvalidCardScoreError} from '../error/InvalidCardScoreError';
+import {DeskEntity} from './desk.entity';
+import {InvalidDeskIndexError} from '../error/InvalidDeskIndexError';
 
 export enum CardType {
   Relatedness,

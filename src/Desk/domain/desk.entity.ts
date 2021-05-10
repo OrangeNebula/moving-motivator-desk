@@ -1,4 +1,4 @@
-import {CardEntity} from '../../Cards/domain/card.entity';
+import {CardEntity} from './card.entity';
 import {ExceedMaxCardError} from '../error/ExceedMaxCardError';
 
 export class DeskEntity {

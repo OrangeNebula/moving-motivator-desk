@@ -1,5 +1,5 @@
 import {DeskEntity} from './desk.entity';
-import {CardEntity, CardType} from '../../Cards/domain/card.entity';
+import {CardEntity, CardType} from './card.entity';
 import {ExceedMaxCardError} from '../error/ExceedMaxCardError';
 
 describe('Desk entity test', () => {
