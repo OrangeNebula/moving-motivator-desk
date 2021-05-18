@@ -7,6 +7,7 @@ For coding practice.
 * [ ] Implement card domain entity, component
 * [ ] Implement desk domain entity, component
 * [ ] Add desk page.
+* [ ] Make movable cards.
 
 ### Reference
 * [moving-motivators](https://management30.com/practice/moving-motivators/)
