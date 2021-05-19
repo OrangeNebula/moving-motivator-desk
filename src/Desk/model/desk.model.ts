@@ -1,8 +1,31 @@
 import {DeskEntity} from '../domain/desk.entity';
+import {CardEntity, CardType} from '../domain/card.entity';
+
+interface RawCard {
+  type: CardType;
+  position: number;
+  score: number;
+}
 
 export class DeskModel {
-  // TODO: Abstraction of storage
+  static Key = 'desk';
+
   getDesk = () => {
-    return new DeskEntity([]);
+    let raw = localStorage.getItem(DeskModel.Key);
+    if (!raw) {
+      return new DeskEntity([]);
+    }
+    const cards = JSON.parse(raw)
+      .cards
+      .map((item: RawCard) => new CardEntity(
+      item.type,
+      item.position,
+      item.score,
+    ));
+    return new DeskEntity(cards);
+  }
+
+  updateDesk = (desk: DeskEntity) => {
+    localStorage.setItem(DeskModel.Key, JSON.stringify(desk));
   }
 }
