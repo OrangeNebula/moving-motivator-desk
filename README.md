@@ -7,6 +7,7 @@ For coding practice.
 * [ ] Implement card domain entity, component
 * [ ] Implement desk domain entity, component
 * [ ] Add desk page.
+* [ ] Implement image cards.
 * [ ] Make movable cards.
 
 ### Reference
