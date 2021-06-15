@@ -10,6 +10,7 @@ For coding practice.
 * [ ] Implement image cards.
 * [ ] Make movable cards.
 * [ ] Add a card flip feature.
+* [ ] Add card images.
 
 ### Reference
 * [moving-motivators](https://management30.com/practice/moving-motivators/)
