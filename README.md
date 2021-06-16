@@ -11,7 +11,7 @@ For coding practice.
 * [ ] Make movable cards.
 * [ ] Add a card flip feature.
 * [ ] Add card images.
-* [ ] 
+* [ ] Add socket server.
 
 ### Reference
 * [moving-motivators](https://management30.com/practice/moving-motivators/)
