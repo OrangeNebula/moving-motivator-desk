@@ -13,6 +13,7 @@ For coding practice.
 * [ ] Add card images.
 * [ ] Add socket server.
 * [ ] Room feature
+* [ ] Add moving card feature.
 
 ### Reference
 * [moving-motivators](https://management30.com/practice/moving-motivators/)
