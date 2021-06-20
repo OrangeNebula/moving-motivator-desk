@@ -6,8 +6,14 @@ For coding practice.
 ### Tasks
 * [ ] Implement card domain entity, component
 * [ ] Implement desk domain entity, component
-* [ ] Add desk page.
+* [ ] Add a desk page.
+* [ ] Implement image cards.
 * [ ] Make movable cards.
+* [ ] Add a card flip feature.
+* [ ] Add card images.
+* [ ] Add socket server.
+* [ ] Room feature
+* [ ] Add moving card feature.
 
 ### Reference
 * [moving-motivators](https://management30.com/practice/moving-motivators/)
