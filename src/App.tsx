@@ -1,24 +1,13 @@
 import React from 'react';
 import './App.css';
+import { CardComponent } from './Desk/component/card.component';
+import { CardType } from './Desk/domain/card.entity';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit
-          <code>src/App.js</code>
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CardComponent cardType={CardType.Power} />
+      <CardComponent cardType={CardType.Honor} />
     </div>
   );
 }

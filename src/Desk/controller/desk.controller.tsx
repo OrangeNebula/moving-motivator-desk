@@ -20,7 +20,8 @@ export const DeskController = ({ viewModel }: Props) => {
   const onReleaseCard = () => {
   };
   */
+  const desk = viewModel.getDesk();
   return (
-    <DeskView />
+    <DeskView cards={desk.cards} />
   );
 };

@@ -4,7 +4,7 @@ import { ExceedMaxCardError } from '../error/ExceedMaxCardError';
 export class DeskEntity {
   static MaxDeskSlot = 10;
 
-  private readonly cards: CardEntity[];
+  public readonly cards: CardEntity[];
 
   constructor(
     cards: CardEntity[] | null,

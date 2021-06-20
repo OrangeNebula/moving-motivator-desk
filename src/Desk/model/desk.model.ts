@@ -10,7 +10,7 @@ interface RawCard {
 export class DeskModel {
   static Key = 'desk';
 
-  getDesk = () => {
+  getDesk = (): DeskEntity => {
     const raw = localStorage.getItem(DeskModel.Key);
     if (!raw) {
       return new DeskEntity(null);
@@ -25,7 +25,7 @@ export class DeskModel {
     return new DeskEntity(cards);
   }
 
-  updateDesk = (desk: DeskEntity) => {
+  updateDesk = (desk: DeskEntity): void => {
     localStorage.setItem(DeskModel.Key, JSON.stringify(desk));
   }
 }
