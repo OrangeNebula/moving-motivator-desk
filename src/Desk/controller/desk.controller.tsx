@@ -1,4 +1,4 @@
-import {DeskView} from '../view/desk.view';
+import { DeskView } from '../view/desk.view';
 
 export const DeskController = ({
   viewModel,
@@ -7,15 +7,15 @@ export const DeskController = ({
   // TODO: Have reference to the view model
 
   const onClickCard = () => {
-  }
+  };
 
   const onMoveCard = () => {
-  }
+  };
 
   const onReleaseCard = () => {
-  }
+  };
 
   return (
     <DeskView />
-  )
-}
+  );
+};
