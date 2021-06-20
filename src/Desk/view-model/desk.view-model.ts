@@ -1,5 +1,5 @@
-import {DeskModel} from '../model/desk.model';
-import {DeskEntity} from '../domain/desk.entity';
+import { DeskModel } from '../model/desk.model';
+import { DeskEntity } from '../domain/desk.entity';
 
 export class DeskViewModel {
   constructor(
