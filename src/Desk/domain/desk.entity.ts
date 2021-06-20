@@ -1,16 +1,27 @@
-import {CardEntity} from './card.entity';
-import {ExceedMaxCardError} from '../error/ExceedMaxCardError';
+import { CardEntity } from './card.entity';
+import { ExceedMaxCardError } from '../error/ExceedMaxCardError';
 
 export class DeskEntity {
   static MaxDeskSlot = 10;
 
+  private readonly cards: CardEntity[];
+
   constructor(
-    private readonly cards: CardEntity[],
+    cards: CardEntity[] | null,
   ) {
+    if (cards) {
+      this.cards = cards;
+    } else {
+      this.cards = CardEntity.getCardTypes().map((item, index) => (new CardEntity(
+        item,
+        index,
+        0,
+      )));
+    }
   }
 
   get(position: number): CardEntity | null {
-    return this.cards.find(item => item.position === position) || null;
+    return this.cards.find((item) => item.position === position) || null;
   }
 
   add(card: CardEntity): void {
@@ -25,7 +36,7 @@ export class DeskEntity {
     if (!card) {
       return null;
     }
-    const index = this.cards.findIndex(item => item.position === position);
+    const index = this.cards.findIndex((item) => item.position === position);
     this.cards.splice(index, 1);
     return card;
   }

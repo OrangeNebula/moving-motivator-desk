@@ -1,5 +1,5 @@
-import {DeskEntity} from '../domain/desk.entity';
-import {CardEntity, CardType} from '../domain/card.entity';
+import { DeskEntity } from '../domain/desk.entity';
+import { CardEntity, CardType } from '../domain/card.entity';
 
 interface RawCard {
   type: CardType;
@@ -11,17 +11,17 @@ export class DeskModel {
   static Key = 'desk';
 
   getDesk = () => {
-    let raw = localStorage.getItem(DeskModel.Key);
+    const raw = localStorage.getItem(DeskModel.Key);
     if (!raw) {
-      return new DeskEntity([]);
+      return new DeskEntity(null);
     }
     const cards = JSON.parse(raw)
       .cards
       .map((item: RawCard) => new CardEntity(
-      item.type,
-      item.position,
-      item.score,
-    ));
+        item.type,
+        item.position,
+        item.score,
+      ));
     return new DeskEntity(cards);
   }
 

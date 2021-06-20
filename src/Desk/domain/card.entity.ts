@@ -1,6 +1,6 @@
-import {InvalidCardScoreError} from '../error/InvalidCardScoreError';
-import {DeskEntity} from './desk.entity';
-import {InvalidDeskIndexError} from '../error/InvalidDeskIndexError';
+import { InvalidCardScoreError } from '../error/InvalidCardScoreError';
+import { DeskEntity } from './desk.entity';
+import { InvalidDeskIndexError } from '../error/InvalidDeskIndexError';
 
 export enum CardType {
   Relatedness,
@@ -19,6 +19,19 @@ export class CardEntity {
   static MaxScore = 100;
 
   static MinScore = -100;
+
+  static getCardTypes = (): CardType[] => [
+    CardType.Relatedness,
+    CardType.Status,
+    CardType.Curiosity,
+    CardType.Acceptance,
+    CardType.Goal,
+    CardType.Power,
+    CardType.Freedom,
+    CardType.Honor,
+    CardType.Mastery,
+    CardType.Order,
+  ]
 
   constructor(
     public readonly type: CardType,

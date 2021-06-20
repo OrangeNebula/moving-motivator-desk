@@ -27,13 +27,23 @@
     "extends": [
       "react-app",
       "eslint:recommended",
-      "eslint-config-airbnb"
+      "eslint-config-airbnb",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
     ],
     "rules": {
       "import/prefer-default-export": "off",
       "import/extensions": "off",
       "no-use-before-define": "off",
+      "no-underscore-dangle": "warn",
+      "no-shadow": "off",
+      "@typescript-eslint/no-shadow": "error",
       "@typescript-eslint/no-use-before-define": ["error"],
+      "no-useless-constructor": "off",
+      "@typescript-eslint/no-useless-constructor": ["error"],
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", "ts", "tsx"] }]
     },
     "overrides": [
