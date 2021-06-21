@@ -8,31 +8,31 @@ interface Props {
 
 const CardImagePosition = {
   [CardType.Order]: {
-    left: 0,
-    top: 0,
+    left: -490,
+    top: 247,
   },
   [CardType.Mastery]: {
-    left: 0,
+    left: -735,
     top: 0,
   },
   [CardType.Honor]: {
-    left: 250,
+    left: -245,
     top: 0,
   },
   [CardType.Goal]: {
-    left: 0,
-    top: 0,
+    left: -735,
+    top: 247,
   },
   [CardType.Power]: {
-    left: 1000,
+    left: -980,
     top: 0,
   },
   [CardType.Freedom]: {
     left: 0,
-    top: 0,
+    top: 247,
   },
   [CardType.Acceptance]: {
-    left: 0,
+    left: -490,
     top: 0,
   },
   [CardType.Curiosity]: {
@@ -40,12 +40,12 @@ const CardImagePosition = {
     top: 0,
   },
   [CardType.Status]: {
-    left: 0,
-    top: 0,
+    left: -980,
+    top: 247,
   },
   [CardType.Relatedness]: {
-    left: 0,
-    top: 0,
+    left: -245,
+    top: 247,
   },
 };
 
