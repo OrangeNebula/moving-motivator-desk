@@ -4,6 +4,7 @@ import styles from './card.module.css';
 
 interface Props {
   cardType: CardType,
+  onClick: () => void,
 }
 
 const CardImagePosition = {
@@ -49,7 +50,7 @@ const CardImagePosition = {
   },
 };
 
-export const CardComponent = ({ cardType }: Props) => {
+export const CardComponent = ({ cardType, onClick }: Props) => {
   const position = CardImagePosition[cardType];
 
   return (
@@ -60,10 +61,12 @@ export const CardComponent = ({ cardType }: Props) => {
         backgroundPositionY: position.top,
         backgroundImage: `url(${process.env.PUBLIC_URL}/xmotivators.png)`,
       }}
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      aria-hidden
     >
-      {/*
-      <img src={`${process.env.PUBLIC_URL}/xmotivators.png`} alt="card" />
-*/}
+      {' '}
     </div>
   );
 };

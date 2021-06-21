@@ -7,15 +7,23 @@ interface Props {
     type: CardType,
     position: number,
   }[],
+  onClick: (type: CardType) => void,
 }
 
 export const DeskView = (props: Props) => {
-  const { cards } = props;
+  const { cards, onClick } = props;
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+      }}
+    >
       {
         cards.map((item) => (
-          <CardComponent cardType={item.type} />
+          <CardComponent
+            cardType={item.type}
+            onClick={() => onClick(item.type)}
+          />
         ))
       }
     </div>

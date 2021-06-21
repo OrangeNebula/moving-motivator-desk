@@ -1,6 +1,6 @@
-import {DeskEntity} from './desk.entity';
-import {CardEntity, CardType} from './card.entity';
-import {ExceedMaxCardError} from '../error/ExceedMaxCardError';
+import { DeskEntity } from './desk.entity';
+import { CardEntity, CardType } from './card.entity';
+import { ExceedMaxCardError } from '../error/ExceedMaxCardError';
 
 describe('Desk entity test', () => {
   test('Can add card properly', () => {
@@ -8,7 +8,7 @@ describe('Desk entity test', () => {
     desk.add(new CardEntity(
       CardType.Acceptance, 0, 0,
     ));
-    expect(desk.get(0)?.type).toBe(CardType.Acceptance);
+    expect(desk.getByPosition(0)?.type).toBe(CardType.Acceptance);
   });
 
   test('If desk has maximum cards, adding card will throw error', () => {
@@ -56,7 +56,7 @@ describe('Desk entity test', () => {
       new CardEntity(CardType.Status, 0, 0),
     ]);
     desk.remove(0);
-    expect(desk.get(0)).toBe(null);
+    expect(desk.getByPosition(0)).toBe(null);
   });
 
   test('Can change card index', () => {
@@ -64,7 +64,7 @@ describe('Desk entity test', () => {
       new CardEntity(CardType.Status, 0, 0),
     ]);
     desk.change(0, 5);
-    expect(desk.get(5)?.type).toBe(CardType.Status);
+    expect(desk.getByPosition(5)?.type).toBe(CardType.Status);
   });
 
   test('Can update card properly', () => {
@@ -72,6 +72,6 @@ describe('Desk entity test', () => {
       new CardEntity(CardType.Status, 0, 0),
     ]);
     desk.update(new CardEntity(CardType.Status, 0, 100));
-    expect(desk.get(0)?.score).toBe(100);
+    expect(desk.getByPosition(0)?.score).toBe(100);
   });
 });

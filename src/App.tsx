@@ -1,21 +1,15 @@
 import React from 'react';
 import './App.css';
-import { CardComponent } from './Desk/component/card.component';
-import { CardType } from './Desk/domain/card.entity';
+import { DeskController } from './Desk/controller/desk.controller';
+import { DeskViewModel } from './Desk/view-model/desk.view-model';
+import { DeskModel } from './Desk/model/desk.model';
 
 function App() {
+  const deskModel = new DeskModel();
+  const deskViewModel = new DeskViewModel(deskModel);
   return (
     <div className="App">
-      <CardComponent cardType={CardType.Curiosity} />
-      <CardComponent cardType={CardType.Honor} />
-      <CardComponent cardType={CardType.Acceptance} />
-      <CardComponent cardType={CardType.Mastery} />
-      <CardComponent cardType={CardType.Power} />
-      <CardComponent cardType={CardType.Freedom} />
-      <CardComponent cardType={CardType.Relatedness} />
-      <CardComponent cardType={CardType.Order} />
-      <CardComponent cardType={CardType.Goal} />
-      <CardComponent cardType={CardType.Status} />
+      <DeskController viewModel={deskViewModel} />
     </div>
   );
 }
