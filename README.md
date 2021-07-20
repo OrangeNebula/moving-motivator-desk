@@ -15,6 +15,7 @@ For coding practice.
 * [ ] Room feature
 * [ ] Add moving card feature.
 * [ ] Add desk view update logic (view model observation)
+* [ ] Image quality upgrade.
 
 ### Reference
 * [moving-motivators](https://management30.com/practice/moving-motivators/)
