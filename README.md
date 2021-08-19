@@ -16,6 +16,7 @@ For coding practice.
 * [ ] Add moving card feature.
 * [ ] Add desk view update logic (view model observation)
 * [ ] Image quality upgrade.
+* [ ] S3 Hosting
 
 ### Reference
 * [moving-motivators](https://management30.com/practice/moving-motivators/)
